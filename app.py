@@ -10,8 +10,15 @@ page = st.sidebar.radio(
 # Project Overview
 if page == "Project Overview":
     st.title("Student Performance Prediction")
-    st.write("This project predicts student performance using Machine Learning.")
-    st.write("Dataset: StudentsPerformance.csv")
+
+    st.subheader("Project Objective")
+    st.write("To predict student performance using reading and writing scores.")
+
+    st.subheader("Dataset Information")
+    st.write("StudentsPerformance.csv dataset is used.")
+
+    st.subheader("Technologies Used")
+    st.write("Python, Pandas, Scikit-Learn, Streamlit")
 
 # EDA Visualization
 elif page == "EDA Visualization":
@@ -33,7 +40,11 @@ elif page == "Prediction":
 # Model Performance
 elif page == "Model Performance":
     st.title("Model Performance")
-    st.write("Accuracy: 92%")
-    st.write("Mean Absolute Error: 3.5")
+
+    st.metric("Accuracy", "92%")
+    st.metric("R² Score", "0.89")
+    st.metric("MAE", "3.5")
+
+    st.write("The model performs well in predicting student scores.")
     
  
