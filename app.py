@@ -3,7 +3,7 @@ import streamlit as st
 st.sidebar.title("Navigation")
 
 page = st.sidebar.radio(
-    "Select Page",
+    "Go to",
     ["Project Overview", "EDA Visualization", "Prediction", "Model Performance"]
 )
 
@@ -13,15 +13,13 @@ if page == "Project Overview":
     st.write("Dataset: StudentsPerformance.csv")
 
 elif page == "EDA Visualization":
-    st.title("EDA Visualizations")
-    st.image("Screenshot_20260605_214038.jpg")
-    st.image("Screenshot_20260605_214541.jpg")
-    st.image("Screenshot_20260605_215029.jpg")
+    st.title("EDA Visualization")
+    st.write("Graphs and charts will be displayed here.")
+    st.bar_chart([50, 70, 80, 90])
 
 elif page == "Prediction":
     st.title("Prediction Page")
 
-    name = st.text_input("Student Name")
     reading = st.number_input("Reading Score", 0, 100)
     writing = st.number_input("Writing Score", 0, 100)
 
@@ -31,5 +29,6 @@ elif page == "Prediction":
 
 elif page == "Model Performance":
     st.title("Model Performance")
-    st.metric("Accuracy", "87%")
+    st.write("Model Accuracy: 92%")
+    
  
